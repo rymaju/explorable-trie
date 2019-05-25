@@ -1,11 +1,46 @@
-/* CSS files add styling rules to your content */
+input{
+    text-align: center;
+    margin: auto;
+    width: 800px;
+    height: 50px;
+    font-size: 30px;
+    display: block;
+    float: center;
+    font-family: 'Courier New', Courier, monospace;
+    border: 5px;
+    border-style: ridge;
+    background-color: whitesmoke;
 
-body {
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-  margin: 2em;
+    
 }
-
-h1 {
-  font-style: italic;
-  color: #373fff;
+svg{
+    display:block;
+    margin: auto;
+    border-style: solid;
+    border: 2px;
+    border-color:black;
+    color: aliceblue;
+    background-color: whitesmoke;
+}
+body{
+    padding: 50px;
+    margin: auto;
+    max-width: 820px;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+}
+p{
+    text-align: left;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

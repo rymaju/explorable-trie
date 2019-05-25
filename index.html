@@ -1,27 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Hello!</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-  </head>  
-  <body>
-    <h1>Hi there!</h1>
-    
-    <p>
-      I'm your cool new webpage. Made with <a href="https://glitch.com">Glitch</a>!
-    </p>
+<html>
+<head>
+    <title>ATCS Final</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js"></script>
-  </body>
+    <div>
+        <h1>What is a Trie?</h1>
+        <p>
+            A "trie" or a "keyword tree" is a useful data structure used by search engines, dictionary applications, and even bioinformatics programs. A Trie is simply a tree that stores various possible series of tokens. Each branch represents a different possibility.
+        <br><br>
+            Tries allow programs that have to parse strings or any series of tokens to be very fast. According to <a href='https://www.geeksforgeeks.org/trie-insert-and-search/'>GeeksForGeeks</a>, "using Trie[s], search complexities can be brought to optimal limit (key length). A Trie completes information re<b>Trie</b>val in O(N) time, which is faster than the alternative of a binary search which runs in O(NlogN) time." However, the fact that a Trie must store a large tree means that it is inefficent in terms of storage, in other words it has a high space complexity. 
+        <br><br>
+            To help you visualize what a Trie is, type in similar words in the interactive text field below to see how a trie might store tokens in a tree.
+        <br><br>
+            i.e. "Carrot", "Canoli", "Computer", "Curry"
+        <br><br>
+            Play around with different words! Reload the page to reset.
+        </p>
+    </div>
+
+    <div>
+        <h1>Type Here to Build the Trie</h1>
+        <input id="input"type="text" oninput="addWord()">
+        <br>
+        <svg id='trie'width='800'height='600'></svg>
+    </div>
+
+    <div>
+            <h1>Type Here to Search the Trie</h1>
+            <input id="search"type="text" oninput="searchTrie()">
+            <br>
+            <p id="searchText" style="font-family: 'Courier New', Courier, monospace; min-height: 100px">Type a word you have added to the Trie and see if it is in the Trie and if it has any valid characters that follow it.<p>
+        </div>
+
+    <script src='https://d3js.org/d3.v4.min.js'></script>
+    <script src="trie.js"></script>
+</body>
 </html>
