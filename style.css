@@ -1,4 +1,4 @@
-input{
+.textInput{
     text-align: center;
     margin: auto;
     width: 800px;
@@ -13,6 +13,19 @@ input{
 
     
 }
+.half-box{
+    width: 380px;
+    margin: auto;
+    display: inline-block;
+    background-color: whitesmoke;
+    height: 50px;
+    border: 5px;
+    border-style: ridge;
+    text-align: center;
+    padding-top: 25px;
+
+}
+
 svg{
     display:block;
     margin: auto;

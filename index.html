@@ -22,19 +22,32 @@
 
     <div>
         <h1>Type Here to Build the Trie</h1>
-        <input id="input"type="text" oninput="addWord()">
+        <input class='textInput' id="input"type="text" oninput="addWord()">
         <br>
         <svg id='trie'width='800'height='600'></svg>
     </div>
 
     <div>
             <h1>Type Here to Search the Trie</h1>
-            <input id="search"type="text" oninput="searchTrie()">
+            <input class='textInput' id="search"type="text" oninput="searchTrie()">
             <br>
             <p id="searchText" style="font-family: 'Courier New', Courier, monospace; min-height: 100px">Type a word you have added to the Trie and see if it is in the Trie and if it has any valid characters that follow it.<p>
-        </div>
+    </div>
+    <div style="display:block; margin:auto;">
+            <h2>Download or Upload your Trie</h2>
+            <div class="half-box">
+                <input type="file" id="fileInput" accept=".txt">
+                <button onclick="uploadTrieJSON()">Submit</button>
+            </div>
+            <div class="half-box">
+                <button onclick="downloadTrieJSON()">Download</button>
+            </div>
+    </div>
 
+    <!--https://d3js.org -->
     <script src='https://d3js.org/d3.v4.min.js'></script>
+    <!--http://danml.com/download.html -->
+    <script src='download.js'></script>
     <script src="trie.js"></script>
 </body>
 </html>
