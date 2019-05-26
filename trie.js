@@ -158,16 +158,12 @@ function searchTrie(){
         currentSearchNode = root;
         return;
     }
-    
-
     let newSearchCharacter = search.substring(search.length-1).toUpperCase();
 
     //search the tree to see if the node is in the Trie
     let searchInTree = true;
-
     let currentNode = currentSearchNode;
     
-
     //if the new letter is a child of the node we looked at during the previous search, we can start from there instead of starting over from root.
     //O(1)
     if(newSearchCharacter in currentSearchNode.children){
@@ -191,14 +187,12 @@ function searchTrie(){
             }
         }
     }
-
     //respond with whether their search term is in the Trie, and if it is then what the next valid characters are
     searchText.innerHTML = "";
     let nChildren = Object.keys(currentNode.children).length;
     if(searchInTree){
         
         searchText.innerHTML = search + " is in the Trie. <br><br>";
-
         searchText.innerHTML += "The next valid characters are: <br><br>";
         
         let firstChar = true;
@@ -216,13 +210,10 @@ function searchTrie(){
             nextValidCharactersHTML += currentNode.children[Object.keys(currentNode.children)[i]].value;
         }
         searchText.innerHTML += nextValidCharactersHTML;
-
-
     }
     else{
         searchText.innerHTML = search + " is not the Trie. Search for a different string. <br><br>";
     }
-
 }
 
 //uses download.js to download JSON stingify-ed Trie
@@ -252,7 +243,6 @@ function loadTrieJSON(){
 
 //recursive function, builds tree from the leaves up by parsing JSON (just gives general objects not TrieNodes) and forms a TrieNode tree that overwrites root.
 function buildTreeFromJSONObject(object){
-    
     let children = {};
 
     let JSONObjectKeys = Object.keys(object.children)
@@ -262,14 +252,6 @@ function buildTreeFromJSONObject(object){
         let key = JSONObjectKeys[i];
         children[key] = buildTreeFromJSONObject(object.children[key])
     }
-    
-    return new TrieNode(object.value, children);
 
-    
-}
-
-function timeRender(){
-  console.time('renderRoot');
-  renderRoot()
-  console.timeEnd('renderRoot');
+    return new TrieNode(object.value, children);   
 }
