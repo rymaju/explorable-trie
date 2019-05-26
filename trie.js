@@ -267,3 +267,9 @@ function buildTreeFromJSONObject(object){
 
     
 }
+
+function timeRender(){
+  console.time('renderRoot');
+  renderRoot()
+  console.timeEnd('renderRoot');
+}
