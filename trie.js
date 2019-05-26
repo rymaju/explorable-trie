@@ -30,8 +30,8 @@ class TrieNode{
     renderChildren(height, startX, width, parentX, parentY){
         let C = this.children;
         const nChildren = Object.keys(this.children).length;
-        const nodePosition = (width/(1+nChildren));
-        const nodeSpace = (width/nChildren);
+        const nodePosition = (width/(nChildren+1));
+        const nodeSpace = (width/(nChildren));
 
        
 
@@ -198,18 +198,24 @@ function searchTrie(){
     if(searchInTree){
         
         searchText.innerHTML = search + " is in the Trie. <br><br>";
-        searchText.innerHTML += "The next valid characters are: <br><br>";
 
+        searchText.innerHTML += "The next valid characters are: <br><br>";
+        
         let firstChar = true;
+        let nextValidCharactersHTML= "None";
 
         for(let i = 0; i < nChildren; i++){
-            if(firstChar)
+            if(firstChar){
+                nextValidCharactersHTML = "";
                 firstChar = false;
-            else
-                searchText.innerHTML += ", ";
+            }
+            else{
+                nextValidCharactersHTML += ", ";
+            }
 
-            searchText.innerHTML += currentNode.children[Object.keys(currentNode.children)[i]].value;
+            nextValidCharactersHTML += currentNode.children[Object.keys(currentNode.children)[i]].value;
         }
+        searchText.innerHTML += nextValidCharactersHTML;
 
 
     }

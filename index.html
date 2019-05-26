@@ -8,10 +8,11 @@
     <div>
         <h1>What is a Trie?</h1>
         <p>
-            A "trie" or a "keyword tree" is a useful data structure used by search engines, dictionary applications, and even bioinformatics programs. A Trie is simply a tree that stores various possible series of tokens. Each branch represents a different possibility.
+            A "trie" or a "keyword tree" is a useful data structure used by search engines, dictionary applications, and even bioinformatics (specifically geonome sequencing) algorithms being taught at the UIUC<sup><a href="#footnotes">1</a></sup> and the UCSD<sup><a href="#footnotes">2</a></sup>. A Trie is simply a tree that stores various possible series of tokens. Each branch represents a different possibility.
         <br><br>
-            Tries allow programs that have to parse strings or any series of tokens to be very fast. According to <a href='https://www.geeksforgeeks.org/trie-insert-and-search/'>GeeksForGeeks</a>, "using Trie[s], search complexities can be brought to optimal limit (key length). A Trie completes information re<b>Trie</b>val in O(N) time, which is faster than the alternative of a binary search which runs in O(NlogN) time." However, the fact that a Trie must store a large tree means that it is inefficent in terms of storage, in other words it has a high space complexity. 
+            Tries allow programs that have to parse strings or any series of tokens to be very fast. According to GeeksForGeeks, "using Trie[s], search complexities can be brought to optimal limit (key length). A Trie completes information re<b>Trie</b>val in O(N) time, which is faster than the alternative of a binary search which runs in O(NlogN) time."<sup><a href="#footnotes">3</a></sup> However, the fact that a Trie must store a large tree means that it is inefficent in terms of storage, in other words it has a high space complexity. 
         <br><br>
+            
             To help you visualize what a Trie is, type in similar words in the interactive text field below to see how a trie might store tokens in a tree.
         <br><br>
             i.e. "Carrot", "Canoli", "Computer", "Curry"
@@ -31,7 +32,7 @@
             <h1>Type Here to Search the Trie</h1>
             <input class='textInput' id="search"type="text" oninput="searchTrie()">
             <br>
-            <p id="searchText" style="font-family: 'Courier New', Courier, monospace; min-height: 100px">Type a word you have added to the Trie and see if it is in the Trie and if it has any valid characters that follow it.<p>
+      <p id="searchText" style="font-family: 'Courier New', Courier, monospace; min-height: 100px">Type a word you have added to the Trie and see if it is in the Trie and if it has any valid characters that follow it.</p>
     </div>
     <div style="display:block; margin:auto;">
             <h2>Download or Upload your Trie</h2>
@@ -42,6 +43,16 @@
             <div class="half-box">
                 <button onclick="downloadTrieJSON()">Download</button>
             </div>
+    </div>
+
+    <div>
+            <p id="footnotes">
+                <sup>1</sup>  the University of Illinois Urbana-Champaign has very informative <a href="http://veda.cs.uiuc.edu/courses/fa08/cs466/lectures/Lecture10.pdf">lecture slides</a> that explain why Tries are used for genome sequencing rather than Hashmaps
+                <br><br>
+                <sup>2</sup>  the University of California San Diego has a <a href="https://www.coursera.org/lecture/algorithms-on-strings/from-genome-sequencing-to-pattern-matching-OuPLQ">Coursea course module on Tries</a> and they they go into detail on how and why they are used in genome sequencing algorithms.
+                <br><br>
+                <sup>3</sup>  GeekForGeeks explains basic Trie algorithms in their article, <b><a href='https://www.geeksforgeeks.org/trie-insert-and-search/'>Trie Insert and Search</a></b>
+            </p>
     </div>
 
     <!--https://d3js.org -->

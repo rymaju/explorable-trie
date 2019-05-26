@@ -1,3 +1,6 @@
+#footnotes{
+  font-size:18px;
+}
 .textInput{
     text-align: center;
     margin: auto;
@@ -25,7 +28,10 @@
     padding-top: 25px;
 
 }
-
+a{
+  text-decoration:none;
+  font-weight:700;
+}
 svg{
     display:block;
     margin: auto;
