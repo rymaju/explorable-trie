@@ -8,15 +8,15 @@
     <div>
         <h1>What is a Trie?</h1>
         <p>
-            A “trie”, also known as a “suffix/prefix tree” or “keyword tree”, is a data structure used in search engines, dictionary applications, and even bioinformatics algorithms being taught at renowned universities such as UIUC<sup><a href="#footnotes">1</a></sup> and UCSD<sup><a href="#footnotes">2</a></sup>.
+            A “trie”, also known as a “suffix/prefix tree” or “keyword tree”, is a data structure used in search engines, dictionary applications, and even bioinformatics algorithms taught at renowned universities such as UIUC<sup><a href="#footnotes">1</a></sup> and UCSD<sup><a href="#footnotes">2</a></sup>.
         <br><br>
-            The Trie data structure is a kind of search tree where each node has children with values that correspond to different possible branches of the search.
+            The Trie data structure is a type of search tree where each node has children with values that correspond to the various next possible branches of the search.
         <br><br>
             Tries are often used to parse characters in a string. Here is a Trie representation of the words “Cat”, “Car”, and “Cut”. Try tracing each node’s children to find each word.
         <br><br>
           <img width="800" src="https://cdn.glitch.com/ae809780-c38e-44bc-8c8b-0dc5950401c4%2Ftrie.png?1558839178886">
         <br><br>
-            Tries allow programs that have to parse strings or any series of tokens to be very fast. According to GeeksForGeeks, "using Trie[s], search complexities can be brought to optimal limit (key length). A Trie completes information re<b>Trie</b>val in O(N) time, which is faster than the alternative of a binary search which runs in O(NlogN) time."<sup><a href="#footnotes">3</a></sup> However, the fact that a Trie must store a large tree means that it is inefficent in terms of storage, in other words it has a high space complexity. 
+            Tries allow programs that have to parse strings or any series of tokens to be very fast. According to GeeksForGeeks, "using Trie[s], search complexities can be brought to optimal limit (key length). A Trie completes information re<b>Trie</b>val in O(N) time, which is faster than the alternative of a binary search which runs in O(NlogN) time."<sup><a href="#footnotes">3</a></sup> However a Trie must store all the possible branches of the search as nodes in a tree, which which makes Tries inefficient in terms of storage; in other words, Tries have a high space complexity.
         <br><br>
             
             To help you visualize what a Trie is, type in similar words in the interactive text field below to see how a trie might store tokens in a tree.
